@@ -114,7 +114,7 @@ In this task, you’ll create a **Dataflow Gen2** in Microsoft Fabric, import a 
  
 1. Show that the quantity field for Red bikes is now 10 instead of 1.
 
-   ![New dataflow.](./Images/E5T1S17.png)
+   ![New dataflow.](./Images/E5T1S17-1.png)
  
 1. Here is a concise summary highlighting the impacts of Visual Query and M-Query/M-Code scripting:
 
