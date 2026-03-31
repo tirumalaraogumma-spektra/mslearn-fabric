@@ -83,17 +83,19 @@ In this task, you will create a Fabric workspace. The workspace will contain all
 
 1. On the **+Add people or groups** window, search with `https://aec-svc/` service principle and select it.
 
-    ![](./Images/search.png)
-
+     ![](./Images/search.png)
 
 1. In the Add people pane, select the appropriate role from **Admin (1)**, and then click **Add (2)**. Make sure that is listed on the **Manage access** window.
 
-    ![](./Images/admin.png)
+     ![](./Images/admin.png)
 
-      
+1. On the **Manage Access** page, you should see that your account and service principle is listed as an **Admin**.
+
+    ![](./Images/E1T2S8.png)
+
 ## Task 3: Create a Lakehouse
 
-In this task, switch to the Data engineering experience and create a new Lakehouse. You'll use it to ingest and manage data in the following steps.
+In this task, switch to the Data engineering experience and create a new Lakehouse. The **Lakehouse** will act as the central storage layer where you will ingest, store, and manage data in the upcoming steps.
 
 1. At the bottom left of the Power BI portal, select the **Power BI (1)** icon and switch to the **Fabric (2)** experience.
 
@@ -115,7 +117,7 @@ In this task, switch to the Data engineering experience and create a new Lakehou
 
 1. In the search box, search for **Lakehouse (1)** and select **Lakehouse (2)** from the list.
 
-    ![](./Images/Lake1.png)
+    ![](./Images/E1T2S4.png)
 
 1. In the **New lakehouse** window, enter the **Name** as **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** and make sure to **unhcheck Lakehouse Schemas box (2)** click on **Create (3)**.
 
@@ -131,7 +133,7 @@ In this task, switch to the Data engineering experience and create a new Lakehou
 
 ## Task 4: Create a pipeline
 
-In this task, you'll create a pipeline to automate data workflows. Using the Copy data activity, you'll extract data from a source and copy it to a file in the lakehouse, streamlining the data ingestion process.
+In this task, you'll create a pipeline to automate data workflows. We will use the **Copy Data activity** to extract data from a source and load it into a file in the Lakehouse, enabling a streamlined and repeatable data ingestion process.
 
 1. In the left pane, navigate back to the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, then click on **+ New item (2)**.
 
@@ -141,9 +143,9 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
     ![](./Images/E1T4S2.png)
 
-1. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
+1. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** make sure the location is set to **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** and have the check box **(3)** enabled, then click on **Create (4)**. 
     
-    ![](./Images/fab-ric-ex1-g8.png)
+    ![](./Images/E1T4S3.png)
    
 1. On the **Build a data pipeline to organize and move your data** page, select **Copy data assistant**.
 
@@ -151,7 +153,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
 1. In the **Copy data** wizard, on the **Choose data source** page, search for **Http (1)** and select the **Http (2)** source from the results.
 
-   ![](./Images/l1t4s5.png)
+   ![](./Images/E1T4S5.png)
 
 1. In the **Connection settings** pane, enter the following settings for the connection to your data source:
     
@@ -165,7 +167,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
     - Leave everything else as default
     - Click on **Next (5)**
   
-      ![03](./Images/l1t4s6.png)
+      ![03](./Images/E1T4S6.png)
     
 1. On the **Choose data** pane, keep the default settings and click **Next**.
     
@@ -178,8 +180,6 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
    - **Row delimiter:** Line feed (\n) **(3)**
    - Click **Preview data (4)** to view a sample of the data.
    - After reviewing, close the preview and click **Next (5)**.
-
-        ![Account-manager-start](./Images/l1t4s8.png)
 
         ![Account-manager-start](./Images/E1T4S8i.png)
 
@@ -207,7 +207,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
 1. On the **Review + save** page, verify the source and destination details, then click **Save** to create and run the copy job.
 
-    ![09](./Images/cpjobsave.png)
+    ![09](./Images/E1T4S13.png)
 
 1. A new pipeline containing a **Copy data** activity is created, as shown here:
 
@@ -268,7 +268,7 @@ In this task, you'll create a pipeline to automate data workflows. Using the Cop
 
 ## Task 5: Create a Notebook
 
-In this task, you'll create a Notebook to document your data analysis. You'll set up the environment, import libraries, and structure your code for exploration, visualization, and insights.
+In this task, create a **Notebook** to perform and document your data analysis. We will set up the environment, import the necessary libraries, and write organized code to explore the data, create visualizations, and generate insights. This approach will help you both analyze the data and keep a clear record of your work.
 
 1. From the left pane, select the workspace named **fabric-<inject key="DeploymentID" enableCopy="false"/>** **(1)** and navigate to your workspace and click on **+ New Item (2)**
 
@@ -280,7 +280,7 @@ In this task, you'll create a Notebook to document your data analysis. You'll se
 
 1. In the **New Notebook** window, enter a name for the Notebook as **Notebook 1 (1)** and click **Create (2)** to continue.
 
-    ![03](./Images/upfab-ric-ex1-g17.png)
+    ![03](./Images/E1T5S2.png)
 
     >**Note:** If **Enhance your notebook experience with AI tools** wizard opens, click **Skip tour**.
 
@@ -378,7 +378,7 @@ In this task, you'll create a Notebook to document your data analysis. You'll se
 
 ## Task 6: Use SQL to query tables
 
-In this task, you'll use SQL to query tables in a database. You'll write statements to retrieve, filter, and manipulate data, helping you analyze the dataset and build your SQL skills.
+In this task, you'll use **SQL** to query tables in the database. We will write statements to retrieve, filter, and manipulate data, enabling you to analyze the dataset and build your SQL skills.
 
 1. At the top-right of the Lakehouse page,  click on **drop-down (1)** and switch from **Lakehouse** to **SQL analytics endpoint (2)**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
 
@@ -405,7 +405,7 @@ In this task, you'll use SQL to query tables in a database. You'll write stateme
 
 ## Task 7: Create a visual query
 
-In this task, you'll create a visual query in Power BI using Power Query. Start by adding the Sales table to the query editor, selecting the necessary columns, and applying a Group By transformation to count distinct line items per sales order. Then, review the summarized results.
+In this task, you'll create a visual query in Power BI using Power Query. We will load the **Sales** table into the query editor, select the required columns, and apply a **Group By** transformation to count distinct line items for each sales order. This helps you summarize and better understand the data before using it for reporting or analysis.
 
 1. On the toolbar, under **New SQL query (1)** drop-down, select **New visual query (2)**.
 
@@ -449,7 +449,7 @@ In this task, you’ll build a report that transforms raw data into insights. Yo
 
 1. In the **New semantic model** window, set the name to **Lakehouse\_<inject key="DeploymentID" enableCopy="false"/> (1)**. Then navigate to **dbo > Tables**, choose **sales (2)**, and click **Confirm (3)**.
 
-    ![](./Images/newsemanticmodel(2).png)
+    ![](./Images/E1T8S2.png)
 
 1. From the left pane select the workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)** and then click on **Lakehouse\_<inject key="DeploymentID" enableCopy="false"/> (2)** Semantic model.
 

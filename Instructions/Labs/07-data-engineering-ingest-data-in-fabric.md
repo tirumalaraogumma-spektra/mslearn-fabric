@@ -24,7 +24,7 @@ In this task, you’ll create a **Dataflow Gen2** in Microsoft Fabric, import a 
 
 1. Search for **Dataflow Gen2 (1)** and select **Dataflow Gen2 (2)**. Leave the name as default, **Uncheck (3)** the **Enable Git integration, deployment pipelines and Public API scenarios**, and then click on **Create (4)**.
 
-   ![New dataflow.](./Images/dfsr.png)
+   ![New dataflow.](./Images/E5T1S2.png)
 
    ![New dataflow.](./Images/dfsrcr.png)
 
@@ -91,6 +91,12 @@ In this task, you’ll create a **Dataflow Gen2** in Microsoft Fabric, import a 
     ```
     Split the Item column by space into two new columns named Description and Color.
     ```
+
+    > **Note:** If you see error stating **Null** value in **Color** column, undo the action and try the below prompt because Copilot is considering multiple spaces.
+
+      ```
+      Split the Item column into three new columns named Description and Color.
+      ```
  
 1. Type the following query into Copilot:
  
@@ -103,6 +109,8 @@ In this task, you’ll create a **Dataflow Gen2** in Microsoft Fabric, import a 
    ![New dataflow.](./Images/upInj6.png)
  
    >**Note:** Copilot can do more than transform the table; we can actually change data as well.
+
+   > Note: If you observe the **Null** value in **Size** column, right click on the column and click on **Remove Columns** then retry the above prompt.
 
 1. **Scenario:** If you think Red bikes are going to be a big seller, then you increase the quantity in the Inventory Call out that the quantities for all items are 1.
 

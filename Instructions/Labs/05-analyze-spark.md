@@ -32,7 +32,7 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 1. In the search box, search **Lakehouse (1)** and select **Lakehouse (2)** from the result.
 
-    ![](./Images/E7T1S2.png)
+    ![](./Images/E1T2S4.png)
    
 1. Enter the details to create a Lakehouse. 
 
@@ -77,7 +77,7 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 1. In the search box, search **Notebook (1)** and select **Notebook (2)** from the result.
 
-    ![](./Images/notebookcr.png)
+    ![](./Images/E1T5S2.png)
 
 1. In the New Notebook window, keep the **default notebook Name (1)** unchanged, and then click **Create (2)** to continue.
 
@@ -89,9 +89,9 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
     ![](./Images/E1T5P5.png) 
     
-1. Select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** from the options and click on **Connect (2)**.
+1. Select **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** from the options and click on **Add (2)**.
     
-    ![](./Images/confblh.png)
+    ![](./Images/E7T2S6.png)
 
     > **Note:** If required, reload the page to get the files and folders.
 

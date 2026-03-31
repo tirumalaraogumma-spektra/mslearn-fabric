@@ -20,7 +20,7 @@ You will be able to complete the following tasks:
 
 ## Task 1: Create a data warehouse
 
-In this task, you will design and implement a data warehouse by organizing data from multiple sources, creating ETL processes, and optimizing for performance. The goal is to enable efficient querying and reporting while ensuring security, compliance, and scalability.
+In this task, you will design and implement a data warehouse by organizing data from multiple sources, creating ETL processes, and optimizing for performance, while ensuring the solution is scalable, secure, and well-structured.
 
 1. Navigate to your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new warehouse.
 
@@ -28,7 +28,7 @@ In this task, you will design and implement a data warehouse by organizing data 
    
 1. In the search box, search **Warehouse (1)** and select **Warehouse** **(2)** from the list.
     
-    ![](./Images/Data1.png)
+    ![](./Images/E2T1S2.png)
 
 1. In the **New warehouse** window, enter the following:
 
@@ -41,7 +41,7 @@ In this task, you will design and implement a data warehouse by organizing data 
 
 ## Task 2: Create tables and insert data
 
-In this task, you’ll set up the foundation of your data warehouse. You’ll create tables with the right structure, load them with sample data, and then build a semantic model on top of those tables. This model provides a business-friendly layer that makes the warehouse data easier to explore and use in reports.
+In this task, you’ll set up the foundation of your data warehouse. You’ll create tables with the right structure, load them with sample data, and then build a semantic model on top of those tables. This model approach provides a business-friendly layer that makes the warehouse data easier to explore and use in reports.
 
 1. In your new warehouse, under **Build a warehouse**, select the **T-SQL** tile.
 
@@ -130,7 +130,7 @@ In this task, you’ll set up the foundation of your data warehouse. You’ll cr
     - **DimProduct**
     - **FactSalesOrder**
 
-        ![](./Images/e2t3p2.png)
+        ![](./Images/E2T2S16.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
@@ -147,9 +147,9 @@ In this task, you will create a relational data warehouse consisting of fact and
 
     ![](./Images/E2T3S1.png)
 
-1. From the toolbar at the top, click **Open**.
+1. From the toolbar at the top, click on **Open**.
 
-    ![](./Images/E1T8P4.png)
+    ![](./Images/E2T3S2.png)
 
 1. In the top right corner, click on **Viewing (1)** drop-down and select **Editing (2)**.
 

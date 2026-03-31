@@ -26,7 +26,7 @@ In this task, you will create a Dataflow (Gen2) to efficiently ingest and transf
 
 1. Search for **Dataflow Gen2 (1)** and select **Dataflow Gen2 (2)**. Leave the name as default, **Uncheck (3)** the **Enable Git integration, deployment pipelines and Public API scenarios**, and then click on **Create (4)**.
 
-   ![New dataflow.](./Images/dfsr.png)
+   ![New dataflow.](./Images/E5T1S2.png)
 
    ![New dataflow.](./Images/dfsrcr.png)
 
@@ -122,11 +122,11 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
 1. In the Search box, search for **Pipeline (1)**, and select **Pipeline (2)**.
 
-   ![](./Images/pl.png)
+   ![](./Images/E1T4S2.png)
 
 1. Set the Name as **Load Orders pipeline (1)** and click on **Create (2)**. This will open the pipeline editor.
 
-   ![](./Images/Flow10.png)
+   ![](./Images/E8T2S4.png)
 
    > **Note:** If the Copy Data wizard opens automatically, close it!
 
@@ -142,9 +142,11 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
    ![](./Images/Flow11.png)
 
-1. Use the **Run** button to run the pipeline, and wait for it to complete. It may take a few minutes.
+1. Use the **Run** button to run the pipeline then click on **Save and Run**, and wait for it to complete. It may take a few minutes.
 
    ![](./Images/Flow12.png)
+   
+   ![09](./Images/fab-ric-ex1-g15.png)
    
    ![](./Images/prun.png)
 

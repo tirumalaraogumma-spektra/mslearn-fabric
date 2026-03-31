@@ -23,7 +23,7 @@ You will be able to complete the following tasks:
 
 In this task, you will create a lakehouse and upload files to facilitate data storage and analysis. Using the same workspace, you'll switch to the *Data Science* experience in the portal to manage and utilize the data effectively.
 
-1. In the left pane, go back to your Lakehouse. In the **Explorer** pane, hover and open the **Ellipsis (…) (1)** menu next to the **Files** node, then choose **Upload (2)** > **Upload files (3)**. 
+1. In the left pane, go back to your **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**. In the **Explorer** pane, hover and open the **Ellipsis (…) (1)** menu next to the **Files** node, then choose **Upload (2)** > **Upload files (3)**. 
 
    ![](./Images/E4T1S1.png)
 
@@ -55,7 +55,7 @@ In this task, you will create a notebook to facilitate model training and experi
 
 2. In the New Item panel, search for **Notebook (1)** and select **Notebook (2)** from the result.
 
-    ![](./Images/notebookcr.png)
+    ![](./Images/E1T5S2.png)
 
 1. In the **New Notebook** window, keep the default notebook **Name (1)** unchanged, and then click **Create (2)** to continue.
 
@@ -85,9 +85,9 @@ In this task, you will load data into a dataframe to prepare for model training.
 
     ![](./Images/E1T5P5.png) 
     
-1. Select the lakehouse named **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** and click **Connect (2)**.
+1. Select the lakehouse named **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** and click **Add (2)**.
  
-    ![](./Images/e4t3p2.png)
+    ![](./Images/E4T3S2.png)
 
 1. Once after connecting to the existing lakehouse, we should be able to see the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** under **Data Items**.
    
