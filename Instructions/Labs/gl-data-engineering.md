@@ -47,17 +47,17 @@ Now that you have created a workspace in the previous step, it's time to switch 
 
     - Click on **Create (2)**.
 
-      ![02](./Images/cop-fab-apr-ex1-g3.png)
+        ![02](./Images/cop-fab-apr-ex1-g3.png)
 
-      >**Note:** After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
+        >**Note:** After a minute or so, a new lakehouse with no **Tables** or **Files** will be created.
 
 1. On the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** tab, in the **Files (1)** node, select the `...` menu, and then choose **New subfolder (2)**.
 
-   ![02](./Images/cop-fab-apr-ex1-g4.png)
+    ![02](./Images/cop-fab-apr-ex1-g4.png)
 
 1. Create a subfolder named **new_data (1)** and click on **Create (2)**.
 
-   ![02](./Images/cop-fab-apr-ex1-g5.png)
+    ![02](./Images/cop-fab-apr-ex1-g5.png)
 
 ### Task 2: Explore shortcuts
 
@@ -65,129 +65,151 @@ In many scenarios, the data you need to work within your lakehouse may be stored
 
 1. In the `...` **(1)** menu for the **Files** folder, select **New shortcut (2)**.
 
-   ![02](./Images/cop-fab-apr-ex1-g6.png)
+    ![02](./Images/cop-fab-apr-ex1-g6.png)
 
 1. View the available data source types for shortcuts. Then close the **New shortcut** dialog box without creating a shortcut.
 
-   ![02](./Images/cop-fab-apr-ex1-g7.png)
+    ![02](./Images/cop-fab-apr-ex1-g7.png)
 
 ### Task 3: Create a pipeline
 
 In this task, you will create a data pipeline in Microsoft Fabric to ingest data by configuring a **Copy Data** activity, which extracts data from a specified source and loads it into your lakehouse.  
 
-1. On the **Home** page for your lakehouse, select **New data pipeline (1)**. 
+1. On the **Home** page, select **Get data (1)**, and then choose **New copy job (2)**.
 
-   - **Note:** If the **New data pipeline** option is not visible directly, select **Get data (2)** from the top left corner and then choose **New data pipeline (3)**.
+    ![](./Images/cop-fab-apr-ex2-g1.png)
 
-      ![](./Images/Updated/E2-T3-S1.png)
+    > **Note:** The **Copy job** experience creates a **data pipeline** in the background with a **Copy Data** activity, enabling you to perform data ingestion using a simplified interface.
 
-1. Create a new data pipeline named **Ingest Sales Data Pipeline (1)** and click on **Create (2)**. 
+1. In the **New Copy job** pane, enter **Ingest Sales Data Pipeline (1)** in the **Name** field, and then select **Create (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g2.png)
    
-   ![03](./Images/01/Pg3-TCreatePipeline-S1.1.png)
-   
-1. In the **Copy Data** wizard, on the **Choose a data source** page, search for **http (1)** and select the **Other** tab and then select **Http (2)**.
+1. In the **Choose data source** step, search for **http (1)**, and then select **Http (2)**.
 
-   ![Screenshot of the Choose data source page.](./Images/data-source.png)
+    ![](./Images/cop-fab-apr-ex2-g3.png)
 
-    >**Note:** If the **Copy data** wizard doesn't open automatically, select **Copy data assistance** in the pipeline editor page.
+1. In the **Connection settings** pane, enter the following details:
 
-     ![03](./Images/01/03.png)
-
-1. In the **Connection settings** pane, enter the following settings for the connection to your data source:
-    - URL: `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv` **(1)**
-    - Connection: **Create new connection (2)**
-    - Connection name: **Connection<inject key="DeploymentID" enableCopy="false"/> (3)**
-    - Authentication kind: **Anonymous (4)**
+    - **URL (1):** `https://raw.githubusercontent.com/MicrosoftLearning/dp-data/main/sales.csv`
+    - **Connection (2):** Select **Create new connection**
+    - **Connection name (3):** Enter **Connection<inject key="DeploymentID" enableCopy="false"/>**
+    - **Authentication kind (4):** Select **Anonymous**
     - Click on **Next (5)**
   
-       ![Account-manager-start](./Images/lab1-image11.png)
+        ![Account-manager-start](./Images/cop-fab-apr-ex2-g4.png)
     
-1. Select **Next**. Make sure the following settings are selected:
-    - **Relative URL**: *Leave blank*
-    - **Request method**: GET
-    - **Additional headers**: *Leave blank*
-    - **Binary copy**: Unselected
-    - **Request timeout**: *Leave blank*
-    - **Max concurrent connections**: *Leave blank*
-  
-        ![](./Images/Updated/E2-T3-S5.png)
+1. In the **Choose data** step, ensure **Request method (1)** is set to **GET**, keep the remaining settings as default, and then select **Next (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g5.png)
    
-1. Wait for the data to be sampled and then ensure that the following settings are selected:
+1. In the **Choose data** step, ensure the following settings are selected:
+
     - File format: **DelimitedText (1)**
     - Column delimiter: **Comma (,) (2)**
     - Row delimiter: **Line feed (\n) (3)**
     - Select **Preview data (4)** to see a sample of the data that will be ingested.
 
-        ![](./Images/Updated/E2-T3-S6.png)
+        ![](./Images/cop-fab-apr-ex2-g6.png)
 
-1. Select **Preview data** to see a sample of the data that will be ingested. Then close the data preview and select **Next**.
+1. In the **Preview data** pane, review the data, and then select **Close**.
 
-     ![](./Images/Updated/E2-T3-S7.png)
+    ![](./Images/cop-fab-apr-ex2-g7.png)
 
+1. In the **Choose data** step, verify the settings and then select **Next**.
 
-1. Note that the connection with **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** will be already present. Set the following data destination options, and then select **Next (4)**:
-    - Root folder: **Files (1)**
-    - Folder path: **new_data (2)**
-    - File name: **sales.csv (3)**
-   
-       ![](./Images/Updated/E2-T3-S8.png)
+    ![](./Images/cop-fab-apr-ex2-g8.png)
 
-1. Set the following file format options and then select **Next (4)**:
-    - File format: **DelimitedText (1)**
-    - Column delimiter: **Comma (,) (2)**
-    - Row delimiter: **Line feed (\n) (3)**
-   
-       ![](./Images/Updated/E2-T3-S9.png)
+1. In the **Settings** step, ensure **Full copy (1)** is selected, choose **Files (2)** under **Destination root folder**, and then select **Next (3)**.
 
-1. On the **Copy summary** page, review the details of your copy operation and then select **Save + Run**.
+    ![](./Images/cop-fab-apr-ex2-g10.png)
 
-    ![](./Images/Updated/E2-T3-S10.png)
+1. In the **Map to destination** step, select **Browse (1)**, choose **new_data (2)**, and then select **OK**.
 
-    >**Note:** A new pipeline containing a **Copy data** activity is created, as shown here:
+    ![](./Images/cop-fab-apr-ex2-g62.png)
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/f-8.png)
+1. In the **Map to destination** step, verify **Folder path (1)** is set to **new_data**, **File name (2)** is **sales.csv**, and then select **Next (3)**.
 
-1. When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded.
+    ![](./Images/cop-fab-apr-ex2-g21.png)
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/01/Pg3-CpyOutput.png)
+1. In the **Map to destination** step, set the following file format options:
 
-1. In the menu bar on the left, select your lakehouse i.e., **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+    - **File format (1):** DelimitedText  
+    - **Column delimiter (2):** Comma (,)  
+    - **Row delimiter (3):** Line feed (\n)  
+    - Then select **Next (4)**.
 
-    ![Lakehouse](./Images/f9.png)
+        ![](./Images/cop-fab-apr-ex2-g22.png)
 
-1. On the **Home** page, in the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Files** and select the **new_data (2)** folder to verify that the **sales.csv (3)** file has been copied.
+1. In the **Review + save** step, review the summary, and then select **Save + Run**.
 
-    ![Account-manager-start](./Images/lab1-image16.png)
+    ![](./Images/cop-fab-apr-ex2-g23.png)
+
+1. When the pipeline starts to run, monitor the status in the **Results** pane, use the **Refresh** icon to update the status, and wait until it shows **Succeeded**.
+
+    ![](./Images/cop-fab-apr-ex2-g24.png)
+
+1. Select **Workspaces (1)**, and then choose your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g25.png)
+
+1. In your workspace, select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
+
+    ![](./Images/cop-fab-apr-ex2-g26.png)
+
+1. In the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** pane, expand **Files (1)**, select the **new_data (2)** folder, and verify the **sales.csv (3)** file.
+
+    ![](./Images/cop-fab-apr-ex2-g27.png)
 
    >**Note:** If you are unable to see the **sales.csv** file under **Files**, right-click on **Files** and select **Refresh**.
+
+1. Select the **sales.csv** file to preview its contents.
+
+    ![](./Images/cop-fab-apr-ex2-g28.png)
+
+1. In the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** pane, select the `... (1)` menu for **Files**, and then choose **Properties (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g34.png)
+
+1. In the **Properties** pane, copy the **ABFS path**.
+
+    ![](./Images/cop-fab-apr-ex2-g35.png)
+
+    > **Note:** The **ABFS path** (Azure Blob File System path) is the fully qualified path to your Lakehouse storage in OneLake, used to access data programmatically.
 
 ### Task 4: Create a notebook
 
 In this task, you will create a notebook within Microsoft Fabric to develop and execute code for data processing and analysis. Notebooks provide an interactive environment for writing and running code in multiple languages, facilitating data engineering and data science workflows.
 
-1. On the **Home** page for your lakehouse, in the **Open notebook (1)** menu, select **New notebook (2)**.
+1. On the **Home** page, select **Open notebook (1)**, and then choose **New notebook (2)**.
 
-      ![11](./Images/01/11.png)
+    ![](./Images/cop-fab-apr-ex2-g29.png)
 
     >**Note:** After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-1. Select the existing cell in the notebook, which contains some simple code, and then replace the default code with the following variable declaration and click on **&#9655; Run**.
+1. If the **Notebook Copilot Updates and Git Integration Supporting Resources** pop-up appears, select **Skip for now**.
+
+    ![](./Images/cop-fab-apr-ex2-g30.png)
+
+1. In the notebook, replace the existing code with the variable declaration **table_name = "sales" (1)**, and click on **&#9655; Run**.
 
     ```python
    table_name = "sales"
     ```
 
-   ![11](./Images/01/Pg3-Notebook-S2.png) 
-
-1. If a pop-up titled **New data sources and languages now available** appears, please click on **Skip tour** to proceed.  
-
-     ![Account-manager-start](./Images/f10.png)
+   ![11](./Images/cop-fab-apr-ex2-g31.png) 
 
 1. In the **... (1)** menu for the cell (at its top-right) select **Toggle parameter cell (2)**. This configures the cell so that the variables declared in it are treated as parameters when running the notebook from a pipeline.
 
-     ![Account-manager-start](./Images/lab1-image17.png)
+     ![Account-manager-start](./Images/cop-fab-apr-ex2-g32.png)
 
-1. Under the parameters cell, use the **+ Code** button to add a new code cell. Then add the following code to it:
+1. Select **+ Code** to add a new code cell.
+
+    ![](./Images/cop-fab-apr-ex2-g33.png)
+
+    > **Note:** You may need to hover your mouse below the existing cell to see the **+ Code** option.
+
+1. Add a new code cell, paste the code **(1)**, and then select **Run (2)**.
 
     ```python
    from pyspark.sql.functions import *
@@ -209,17 +231,13 @@ In this task, you will create a notebook within Microsoft Fabric to develop and 
    df.write.format("delta").mode("append").saveAsTable(table_name)
     ```
 
-   ![11](./Images/f11.png) 
+   ![11](./Images/cop-fab-apr-ex2-g36.png) 
     
     >**Note:** This code loads the data from the sales.csv file that was ingested by the **Copy Data** activity, applies some transformation logic, and saves the transformed data as a **managed table** - appending the data if the table already exists.
 
-1. Verify that your notebooks look similar to this, and then use the **&#9655; Run all** button on the toolbar to run all of the cells it contains.
-
-    ![Screenshot of a notebook with a parameters cell and code to transform data.](./Images/f12.png)
-
     > **Note**: Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first cell can take a minute or so to complete.
 
-1. (Optional) You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
+1. **(Optional)** You can also create **external tables** for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
     ```python
     df.write.format("delta").saveAsTable("external_sales", path="<abfs_path>/external_sales")
@@ -232,21 +250,33 @@ In this task, you will create a notebook within Microsoft Fabric to develop and 
     ```
     > **Note**: No need to run. To run the above code, you need to replace the <abfs_path> with your abfs path
 
-1. When the notebook run has completed, in the **Explorer** pane on the left, expand **Lakehouse**.
+1. When the notebook run has completed, select **Workspaces (1)**, and then choose your workspace **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-   ![.](./Images/f13.png)
+    ![](./Images/cop-fab-apr-ex2-g25.png)
 
-1. In the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)** pane, expand **Tables (1)**, then select **Refresh** and verify that a **sales (2)** table has been created.
+1. In your workspace, select **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![.](./Images/f14.png)
+    ![](./Images/cop-fab-apr-ex2-g26.png)
 
-1. Then set the **Name** of the notebook to **Load Sales Notebook (2)** by clicking on the **Saved (1)** drop down from the top left corner.
+1. In the **Tables** section, select the `... (1)` menu, and then choose **Refresh (2)**.
 
-   ![.](./Images/f15.png)
+    ![](./Images/cop-fab-apr-ex2-g37.png)
+
+1. In the **Lakehouse_<inject key="DeploymentID" enableCopy="false"/>** pane, expand **Tables (1)**, expand **dbo (2)**, and verify the **sales (3)** table.
+
+    ![](./Images/cop-fab-apr-ex2-g38.png)
+
+1. In the notebook, select the **Save** icon.
+
+    ![](./Images/cop-fab-apr-ex2-g39.png)
+
+1. In the **Save as new notebook** pane, enter **Load Sales Notebook (1)** in the **Name** field, and then select **Save (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g40.png)
  
 1. In the hub menu bar on the left, select your lakehouse **Lakehouse_<inject key="DeploymentID" enableCopy="false"/> (1)**. In the **Explorer** pane, refresh the view. Then expand **Tables (2)**, and select the **sales (3)** table to see a preview of the data it contains **(4)**.
 
-   ![.](./Images/f16.png)
+   ![.](./Images/cop-fab-apr-ex2-g41.png)
 
 ### Task 5: Use SQL to query tables
 
@@ -254,11 +284,15 @@ In this task, you will utilize the SQL analytics endpoint automatically created 
 
 When you create a lakehouse and define tables in it, an SQL endpoint is automatically created through which the tables can be queried using SQL `SELECT` statements.
 
-1. At the top-right of the Lakehouse page, switch from **Lakehouse** to **SQL analytics endpoint**. Click on the **Lakehouse (1)** drop down and then select **SQL analytics endpoint (2)**. Then wait a short time until the SQL query endpoint for your lakehouse opens in a visual interface from which you can query its tables, as shown here:
+1. At the top-right, select the **Lakehouse (1)** dropdown, choose **SQL analytics endpoint (2)**, and wait for the SQL endpoint to open.
 
-    ![.](./Images/f17.png)
+    ![](./Images/cop-fab-apr-ex2-g42.png)
 
-1. Use the **New SQL query (1)** button to open a new query editor, and enter the following SQL query **(2)**:
+1. On the toolbar, select the **New SQL query (1)** dropdown, and then choose **New SQL query (2)**.
+
+    ![](./Images/cop-fab-apr-ex2-g43.png)
+
+1. In the query editor, enter the SQL query **(2)**, and then select **Run (1)**.
 
     ```SQL
    SELECT Item, SUM(Quantity * UnitPrice) AS Revenue
@@ -267,19 +301,19 @@ When you create a lakehouse and define tables in it, an SQL endpoint is automati
    ORDER BY Revenue DESC;
     ```
 
-   ![.](./Images/f18.png)
+   ![.](./Images/cop-fab-apr-ex2-g44.png)
 
-1. Use the **&#9655; Run** button to run the query and view the results, which should show the total revenue for each product.
+1. View the query results, which display the total revenue for each product.
 
-    ![Screenshot of a SQL query with results.](./Images/f-19.png)
+    ![](./Images/cop-fab-apr-ex2-g45.png)
 
 ### Task 6: Create a visual query
 
 In this task, you will utilize the visual query editor in Microsoft Fabric to create queries without writing code. This approach leverages Power Query skills, enabling data analysts familiar with Power BI to design visual queries efficiently. 
 
-1. On the toolbar, use the **New SQL query (1)** drop-down and select **New visual query (2)**.
+1. On the toolbar, select the **New SQL query (1)** dropdown, and then choose **New visual query (2)**.
 
-    ![Screenshot of a SQL query with results.](./Images/f20.png)
+    ![](./Images/cop-fab-apr-ex2-g46.png)
 
 1. Drag the **sales** table to the new visual query editor pane that opens to create a Power Query as shown here: 
 
