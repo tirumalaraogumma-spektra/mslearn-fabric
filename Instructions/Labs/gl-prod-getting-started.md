@@ -29,7 +29,7 @@ Participants should have the following prerequisites:
 
 The architecture for the **Microsoft Fabric with Copilot** lab enables end-to-end data integration, analytics, and visualization workflows using Fabric's advanced tools and AI capabilities. It begins with creating a dedicated **workspace** to manage resources and collaborate effectively. **Data ingestion** is facilitated through **pipelines** and **Spark-powered** notebooks, storing data in a **Lakehouse** for analysis. Structured data is processed in a **data warehouse**, where **tables** and **data models** are created for efficient querying and reporting. **Fabric Copilot** enhances automation by enabling natural language interactions for data ingestion, transformation, and report generation. This streamlined architecture provides scalability, productivity, and actionable insights, supporting complex data engineering and analytics scenarios.
 
-## Architechture Diagram
+## Architecture Diagram
 
 ![](Images/fabricarc.png)
 
@@ -77,7 +77,7 @@ Once you're ready to dive in, your virtual machine and **Lab guide** will be rig
 
 ## Utilizing the Zoom In/Out Feature
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment. 
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment. 
 
    ![Zoom In/Out.](Images/g2.png)  
 
@@ -105,7 +105,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![New dataflow.](./Images/inline-validation.png)
 
@@ -174,5 +174,3 @@ Learner Support Contacts:
 Now, click on **Next** from the lower right corner to move on to the next page.
 
    ![New dataflow.](./Images/g4.png)
-
-### Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
