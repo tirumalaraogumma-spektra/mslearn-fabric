@@ -107,13 +107,14 @@ In this task, switch to the Data engineering experience and create a new Lakehou
 
     ![](./Images/ex1t3p2.png)
 
-1. In the left pane, navigate to your Workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, click on **+ New item (2)** to create a new lakehouse.
+1. In the left pane, click on **Workspaces (1)** from the left navigation panel and select your Workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** to navigate to your workspace.
+
+    ![](./Images/nav.png)
+
+1. Click on **+ New item (2)** to create a new lakehouse.
 
     ![](./Images/newitem.png)
 
-    >**Note:** To navigate to your workspace click on **Workspaces (1)** from the left navigation panel and select your Workspace named as **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)**
-
-    ![](./Images/nav.png)
 
 1. In the search box, search for **Lakehouse (1)** and select **Lakehouse (2)** from the list.
 
