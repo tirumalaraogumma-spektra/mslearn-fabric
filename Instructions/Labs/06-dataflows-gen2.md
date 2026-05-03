@@ -121,7 +121,7 @@ In this task, you’ll add a dataflow to a pipeline to streamline the data proce
 
    ![](./Images/E1T4S2.png)
 
-1. Set the Name as **Load Orders pipeline (1)** and click on **Create (2)**. This will open the pipeline editor.
+1. Set the Name as **Load Orders pipeline (1)** and click on **Create (3)**. This will open the pipeline editor.
 
    ![](./Images/E8T2S4.png)
 
