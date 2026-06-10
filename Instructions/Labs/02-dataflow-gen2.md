@@ -2,6 +2,14 @@
 
 ### Estimated Duration: 50 Minutes
 
+## Lab Scenario 
+
+With the high-volume historical sales data (2019–2021) successfully processed using Spark, you now need to ingest weekly promotion and store lookup data into the Contoso Retail analytics platform.
+
+Unlike the massive e-commerce datasets, this operational data is smaller but requires frequent updates and quick, low-code formatting fixes before it can be used for reporting.
+
+In this exercise, you will create a Dataflow (Gen2) using Power Query Online to ingest and clean this promotional data. You will configure your fabric_Lakehouse as the final data destination and then integrate the completed dataflow into a Fabric Data Pipeline to automate the ingestion workflow.
+
 ## Overview
 
 In this exercise, you will create and manage Dataflows (Gen2) within Microsoft Fabric to ingest, transform, and prepare data for analysis. You will learn how to build a dataflow to connect to various data sources, apply transformations using Power Query Online, configure data destinations for storing processed data in a lakehouse, and integrate the dataflow into a pipeline to automate data processing workflows.
@@ -18,17 +26,17 @@ You will be able to complete the following tasks:
 
 In this task, you will create a Dataflow (Gen2) to efficiently ingest and transform data from multiple sources for analysis. This process streamlines data preparation, enabling you to prepare the data for further processing and insights.
 
-1. From the left pane, click on **My workspace (1)**, then select the **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace.  
+1. From the left pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/>** **(1)** workspace then select the **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace.  
 
-    ![](./Images2/lab3-11-01.png)
+    ![](./Images2/2/e2-t2-7.png)
 
 1. In the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, click on **+ New item (1)**, then in the right pane, search for **Dataflow Gen2 (2)** in the search bar, and select **Dataflow Gen2 (3)** under the **Get data** section.
 
      ![](./Images2/lab3-11-02.png)
 
-1. In the New Dataflow Gen2 dialog, keep the **Name (1)** as default , **uncheck** the **Enable Git integration (2)** option, and click **Create (3)** to proceed.
+1. In the New Dataflow Gen2 dialog, keep the **Name (1)** as default and click **Create (2)** to proceed.
 
-    ![](./Images2/2/t1-2.png)
+    ![](./Images2/2/e2-t1-3.png)
 
 1. After a few seconds, the Power Query editor for your new dataflow opens as shown here. Select **Import from a Text/CSV file**.
 
@@ -75,37 +83,33 @@ In this task, you will add a data destination for the Dataflow to determine wher
 
     ![](./Images2/2/t2-2.png)
 
-1. From the left pane, expand the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, then select the **fabric-lakehouse<inject key="DeploymentID" enableCopy="false"/> (2)** table. The Table name field will automatically populate with **orders (3)**. Click **Next (4)** to continue.
+1. From the left pane, expand the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, then select the **dbo (2)** under **fabric-lakehouse<inject key="DeploymentID" enableCopy="false"/>** table. The Table name field will automatically populate with **orders (3)**. Click **Next (4)** to continue.
 
-    ![](./Images2/2/t2-3pa.png)
+    ![](./Images2/2/e2-t2-des-target.png)
 
 1. On the **Choose Destination settings** page, toggle **off** the **use automatic settings (1)** option. Then, for the **MonthNo** column header, set the **Source type** to **Whole number (2)**. Finally, click **Save settings (3)** to apply the changes.
 
     ![](./Images2/lab3-11-4.png)
 
-1. Select **Publish** from the bottom right corner to publish the dataflow.
+1. Click the **Save & run (3)** button under **save (2)** dropdown located in the top-left corner of the **Home (1)** ribbon to apply your destination and execute the dataflow.
 
-    ![](./Images2/2/t2-6.png)
+    ![save the changes](./Images2/2/e2-t2-5.png)
 
-1. Once published, click on the **ellipsis (...) (1)** next to the published dataflow in the workspace, select **Properties (2)**, 
+1. Once published, click on the **ellipsis (...) (2)** next to the published **Dataflow (1)** in the workspace, select **Settings (3)**, 
 
-    ![](./Images2/2/t2-7.png)
+    ![](./Images2/2/e2-t2-6-1.png)
 
-    ![](./Images2/2/t2-7p.png)
+1. Rename the dataflow as **Transform Orders Dataflow (1)** and click on **X** to close.
 
-     >**Note:** If the Properties option appears greyed out, it indicates that the publishing process is still in progress. Please wait a few moments and refresh the page once publishing is complete.
-
-1. Rename the dataflow as **Transform Orders Dataflow (1)** and click on **Save (2)**.
-
-    ![](./Images2/2/t2-8.png)
+    ![](./Images2/2/e2-t2-6-2.png)
 
 ## Task 3: Add a dataflow to a pipeline
 
 In this task, you will add a dataflow to a pipeline to streamline the data processing workflow and enable automated data transformations.
 
-1. From the left pane, click on **My workspace (1)**, then select the **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace.  
+1. From the left pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/> workspace (1)**, then select the **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace.  
 
-     ![](./Images2/lab3-11-01.png)
+     ![](./Images2/e2-t2-7.png)
 
 1. In the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, click on **+ New item (1)**, then in the right pane, search for **Pipeline (2)** in the search bar, and select **Pipeline (3)** under the **Get data** section.
 
@@ -135,9 +139,9 @@ In this task, you will add a dataflow to a pipeline to streamline the data proce
 
     ![](./Images2/2/t3-6a.png)
 
-1. From the left pane, click on **My workspace (1)**, then select the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (2)**.  
+1. From the left pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/> workspace (1)**, then then select the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (2)**.  
 
-    ![](./Images2/lab3-11-6.png)
+    ![](./Images2/2/e2-lakehouse.png)
 
 1. In the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/>** view, expand the **Tables (1)** section, and then select the **orders (2)** table to view the loaded data.
 

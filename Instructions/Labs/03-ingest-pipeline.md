@@ -2,6 +2,14 @@
 
 ### Estimated Duration: 90 Minutes
 
+## Lab Scenario 
+
+Now that you have mastered independent data ingestion using Spark and Dataflows, you need to build an automated, enterprise-grade architecture for Contoso Retail. The executive team wants a single, hands-free workflow that pulls fresh, raw daily sales logs from external cloud storage directly into the lakehouse.
+
+Because this process must happen sequentially and reliably every day, you cannot run these tasks manually.
+
+In this exercise, you will build a Fabric Data Pipeline to automate the end-to-end ingestion process. You will construct a workflow that copies raw operational data into OneLake storage, trigger an Apache Spark Notebook to automatically handle complex transformations, and modify the pipeline to ensure the entire ETL sequence runs seamlessly from start to finish.
+
 ## Overview
 
 In this exercise, you will learn how to ingest data into a Microsoft Fabric lakehouse using pipelines. You will implement ETL/ELT processes by building a pipeline that copies data from external sources into OneLake storage and leverages Apache Spark to transform and load it into structured tables for analysis—an essential skill for scalable cloud-based analytics solutions.
@@ -53,7 +61,7 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
     
 8. Leave all fields on the **Choose data** page as default and click **Next**.
   
-    ![](./Images2/3/E3T1S6.png)
+    ![](./Images2/3/e3-t1-07.png)
    
 9. After the data is sampled, ensure the following settings are selected and leave all other fileds as default:
     
@@ -62,38 +70,38 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
     - Row delimiter: **Line feed (\n) (3)**
     - Click **Preview data (4)** to see a sample of the data.
 
-      ![](./Images2/3/E3T1S8.png)
+      ![](./Images2/3/e3-t1-08.png)
 
-10. After reviewing the sample data, click **Next** to proceed to the next step.
+10. After reviewing the sample data, click **Next (5)** to proceed to the next step.
 
-    ![](./Images2/3/t1-8.png)
+    ![](./Images2/3/e3-t1-preview-data.png)
 
 11. On the **Choose data destination** page, click on **OneLake catalog (1)** from the top menu bar, then select the lakehouse named **fabric_lakehouse_<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
     ![](./Images2/3/t1-9.png)
      
-1. On **Choose copy job mode** page, select **Full copy (1)** and click on **Next (2)**.
+1. On **Settings** page, select **Full copy (1)** and select **File (2)** under Destination root folder,  click on **Next (3)**.
 
-    ![](./Images2/3/E3T1S11.png)
+    ![](./Images2/3/e3-t1-11.png)
 
 12. On the **Map to destination** page, configure the following settings:
 
-    - Select: **Files (1)**
-    - Folder path: **new_data (2)**
-    - File name: **sales.csv  (3)**
+    - Folder path: **new_data (1)**
+    - File name: **sales.csv  (2)**
+    - Expand **File format settings dropdown (3)**
    
-      ![](./Images2/3/E3T1S12.png)
+      ![](./Images2/3/e3-t1-12.png)
 
-13. Scroll down and expand **File format settings** and select following settings and then click on **Next (3)**:
+13. Scroll down and select following settings from **File format settings** and then click on **Next (3)**:
 
     - Column delimiter: **Comma (,) (1)**
     - Row delimiter: **Line feed (\n) (2)**
 
-      ![](./Images2/3/E3T1S14.png)
+      ![](./Images2/3/e3-t1-13.png)
 
 14. On the **Review + save** page, review the copy summary to verify all source and destination settings, and then click on **Save** to initiate the data copy process.
 
-    ![](./Images2/3/E3T1S13.png)
+    ![](./Images2/3/e3-t1-14.png)
 
 15. After executing the copy operation, a new pipeline containing the **Copy job** activity is automatically created, as shown in the diagram.
 
@@ -137,11 +145,9 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
 
 In this task, you will create a notebook in Microsoft Fabric to begin processing your ingested data using PySpark. You will write code to load sales data, apply transformations, and save the results as a table in the lakehouse enabling further analysis or reporting through SQL or visualization tools.
 
-1. From the lakehouse Home page, open the **Open notebook (1)** menu and select **New notebook (2)** to create a new notebook.
+1. From the lakehouse Home page, select **Analyze data with (1)** dropdown and select **Notebook (2)** option under that choose **New notebook** after it takes you to notebook page view with default notebook cell.
 
-    ![](./Images2/3/t2-1.png)
-
-   **>Note**: If you are unable to see **Open notebook** as mentioned above, kindly click on the three-dot button or zoom out the browser page to view the option.
+    ![](./Images2/3/e3-notebook-option.png)
 
 1. Select the existing cell in the notebook, replace the default code with the following **code (1)** and click on **&#9655; Run (2)**.
 

@@ -2,6 +2,14 @@
 
 ### Estimated Duration: 100 Minutes
 
+## Lab Scenario 
+
+Now that your Microsoft Fabric trial environment is ready, you will begin a critical data engineering project for Contoso Retail.
+
+The executive team needs a multi-year performance review using three years of raw e-commerce sales data covering 2019, 2020, and 2021. Because these datasets span millions of rows, you need a scalable solution.
+
+In this exercise, you will create a centralized Lakehouse to store the raw 2019–2021 files. You will then use a Fabric Notebook and PySpark to load, clean, and aggregate this multi-year data, transforming raw transactions into meaningful insights for the business.
+
 ## Overview
 
 In this exercise, you will use Apache Spark within Microsoft Fabric to ingest, process, and analyze data using PySpark. You will begin by creating a lakehouse to store raw data files and then use notebooks to write and run Spark code for data exploration, transformation, and analysis. You will learn how to work with DataFrames, apply filtering and grouping operations, use Spark SQL for querying data, and visualize results using built-in tools and Python libraries like matplotlib and seaborn. This end-to-end lab provides a practical introduction to scalable data analytics in Microsoft Fabric.
@@ -64,9 +72,9 @@ In this task, you will create a lakehouse to organize and analyze your data file
 
 In this task, you will create a notebook to work with data in Apache Spark. Notebooks provide an interactive environment where you can write and run code in multiple languages, while also allowing you to add notes for documentation.
 
-1. From the left pane, click on **My workspace (1)**, then select the **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace.  
-   
-    ![](./Images2/lab2-11-02.png)
+1. From the left pane, click on **fabric-<inject key="DeploymentID" enableCopy="false"/> workspace (1)**, then select the **fabric-<inject key="DeploymentID" enableCopy="false"/> (2)** workspace.  
+
+     ![](./Images2/e2-t2-7.png)
 
 1. In the **fabric-<inject key="DeploymentID" enableCopy="false"/>** workspace, click on **+ New item (1)**, search for **Notebook (2)** in the search bar, and then select **Notebook (3)** from the results.
 
@@ -109,7 +117,10 @@ In this task, you will create a notebook to work with data in Apache Spark. Note
 
 In this task, you will load data into a dataframe to prepare it for analysis. Dataframes in Spark, similar to Pandas dataframes in Python, offer a structured way to manage and manipulate data organized in rows and columns.
 
-> **Note:** Spark supports multiple coding languages, including Scala, Java, and others. In this exercise, we will use *PySpark*, which is a Spark-optimized variant of Python. PySpark is one of the most commonly used languages on Spark and is the default language in Fabric notebooks.
+> **Note:** Spark supports multiple coding languages, including Scala, Java, and others. In this exercise, we will use *PySpark*, which is a Spark-optimized variant of Python. PySpark is one of the most commonly used languages on Spark and is the default language in Fabric notebooks. 
+
+> **Note:** If any notebook cell show **NameError issue** re-run the notebook code cells again from starting. or check the missed commands and execute them again. 
+![](./Images2/name-df-error-ex-1.png)
 
 1. With the notebook open, expand the **fabric_lakehouse<inject key="DeploymentID" enableCopy="false"/> (1)** under **Data items**, on the **Explorer** page, then expand **Files (2)**, select the **orders (3)** folder, click the **ellipsis (...) (4)** menu next to 2019.csv, and choose **Load data (5)** -> **Spark (6)**.
 
@@ -137,7 +148,7 @@ In this task, you will load data into a dataframe to prepare it for analysis. Da
 
     ![](./Images2/1/t3-5.png)
 
-1. The output displays the rows and columns from the 2019.csv file; however, note that the column headers are incorrect because the default code assumes the CSV includes headers, whereas this file contains data only, without header information.
+1. The output displays the rows and columns from the **2019.csv** file; however, note that the column headers are incorrect because the default code assumes the CSV includes headers, whereas this file contains data only, without header information.
 
 1. Modify the code to set the **header** option to **false**, as shown below:
 

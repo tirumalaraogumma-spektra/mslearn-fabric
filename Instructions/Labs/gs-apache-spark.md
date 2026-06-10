@@ -2,6 +2,12 @@
 
 ### Overall Estimated Duration: 4 Hours
 
+## Lab Scenario 
+
+**Contoso Retail** is a global consumer electronics and department store chain operating both physical brick-and-mortar stores and a major e-commerce platform (contoso.com). Currently, Contoso’s sales data is siloed across different platforms: online sales transactions from the website are captured in a cloud-based SQL database, while regional store managers upload daily physical store sales as flat CSV files to an Azure Blob Storage account.
+
+To gain a holistic view of company performance, the Contoso executive team wants a unified analytics platform. As a Data Engineer at Contoso, your task is to build an automated ETL pipeline in Microsoft Fabric. You will use Dataflows (Gen2) to clean the messy physical store files, use Apache Spark Notebooks to handle the high-volume online sales data and perform advanced aggregations, and orchestrate the entire end-to-end process using Fabric Data Pipelines.
+
 ## Overview
 
 This lab provides an introduction to Dataflows (Gen2) and Data Pipelines in Microsoft Fabric, focusing on their role in data ingestion, transformation, and automation. Participants will explore how Dataflows (Gen2) connect to various data sources, perform transformations using Power Query Online, and integrate with Data Pipelines to load data into a lakehouse or analytical store. The lab will also cover building and orchestrating pipelines using the Fabric user interface, enabling automation of extract, transform, and load (ETL) processes without extensive coding.
@@ -58,7 +64,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab. Here, you will find the Azure credentials. Click on the **Environment** option to verify the credentials.
  
-  ![08](./Images2/env.png)
+  ![08](./Images2/l1-env.png)
  
 ## Utilizing the Split Window Feature
  
@@ -106,9 +112,17 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![05](./Images2/lab1-11-2.png)
 
-1. You will be navigated to the Fabric Home page.
+1. You will be navigated to the PowerBI Home page and click on the **powerBI icon** on bottom-left corner
 
-   ![05](./Images2/fabric.png)
+   ![05](./Images2/power-bi-HPage.png) 
+
+1. To switch from the Power BI page view to the Fabric page view, select the **Fabric** option.
+
+   ![](./Images2/fabric-select.png)
+
+1. This opens the Fabric home page. You can either start the tour or close the **welcome to Fabric view** pop-up and continue.
+
+   ![](./Images2/welcome-fabric.png)
 
 1. Click the **Profile (1)** icon from the top-right corner, then select **Free trial (2)** to activate your Microsoft Fabric trial license.
 
@@ -139,6 +153,10 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 1. In the **Create a workspace** dialog box, enter the name as **fabric-<inject key="DeploymentID" enableCopy="false"/>** **(1)**, then click **Apply (2)** to create the workspace.
 
      ![08](./Images2/namespace.png)
+
+1. Make sure to select workspace type as **Fabric (1)** and in details select **fabric<inject key="DeploymentID" enableCopy="false"/> - West US 3**  **(2)** and click on **Apply (3)**
+
+   ![](./Images2/workspace-fabric.png)
    
 1. When your new workspace opens, it should appear empty, as shown in the image.
 
