@@ -284,7 +284,7 @@ In this task, you will aggregate and group data within a dataframe to summarize 
 
     ![](./Images2/1/t5-2.png)
 
-3.  Add a **new code cell** below the current one by hovering over the area below the cell and selecting **+ Code**. Then enter the following code:
+3. Add a **new code cell** below the current one by hovering over the area below the cell and selecting **+ Code**. Then enter the following code:
 
     ```Python
    from pyspark.sql.functions import *
@@ -402,7 +402,7 @@ In this task, you will use Spark to transform data files into a desired format f
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide. 
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
- <validation step="ca80df5c-5a46-4057-bc33-616462f99925" />
+<validation step="ca80df5c-5a46-4057-bc33-616462f99925" />
 
 
 ## Task 7: Work with tables and SQL
@@ -477,7 +477,7 @@ While it's useful to be able to embed SQL statements into a cell containing PySp
 
       ![](./Images2/1/t7-11.png)
 
-    > **Note:** For more information about Spark SQL and dataframes, see the [Spark SQL documentation](https://spark.apache.org/docs/2.2.0/sql-programming-guide.html).
+        > **Note:** For more information about Spark SQL and dataframes, see the [Spark SQL documentation](https://spark.apache.org/docs/2.2.0/sql-programming-guide.html).
 
 ## Task 8: Visualize data with Spark
 
@@ -725,7 +725,7 @@ In this task, you will save your notebook with a meaningful name to preserve you
 
      ![](./Images2/lab2-11-11.png)
 
-     > **Note:** The stop session icon is present next to the **Start Session** option.
+     > **Note:** The stop session icon is present next to the **Standard Session** option.
 
 ## Summary
 

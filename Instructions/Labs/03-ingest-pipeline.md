@@ -61,7 +61,7 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
     
 8. Leave all fields on the **Choose data** page as default and click **Next**.
   
-    ![](./Images2/3/e3-t1-07.png)
+    ![](./Images2/3/e3-choose-data.png)
    
 9. After the data is sampled, ensure the following settings are selected and leave all other fileds as default:
     
@@ -101,7 +101,7 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
 
 14. On the **Review + save** page, review the copy summary to verify all source and destination settings, and then click on **Save** to initiate the data copy process.
 
-    ![](./Images2/3/e3-t1-14.png)
+    ![](./Images2/3/e3-review.png)
 
 15. After executing the copy operation, a new pipeline containing the **Copy job** activity is automatically created, as shown in the diagram.
 
@@ -161,7 +161,7 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
 
     ![](./Images2/3/t2-3.png)
 
-1. Under the parameters cell, hover the mouse and use the **+ Code** button to add a new code cell. Then add the following code to it:
+1. Under the parameters cell, hover the mouse and click the **+ Code** button to add a new code cell. Then add the following code to it:
 
     ![](./Images2/3/t2-4.png)
 
@@ -185,7 +185,7 @@ In this task, you will create a notebook in Microsoft Fabric to begin processing
     df.write.format("delta").mode("append").saveAsTable(table_name)
     ```
 
-    This code loads data from the ingested **sales.csv** file, applies transformations, and saves it as a **managed table**, appending if the table already exists.
+    > **Note**: This code loads data from the ingested **sales.csv** file, applies transformations, and saves it as a **managed table**, appending if the table already exists.
 
 1. Verify your notebook matches the example and click **&#9655; Run all** on the toolbar to execute all cells.
 
@@ -248,12 +248,12 @@ In this task, you will modify your existing pipeline to include the notebook you
 
                 ![](./Images2/lab4-11-13.png)
 
-    - **Logging settings (1)**:
+    - Click on **Logging settings (1)** tab:
         - **Enable logging**: *Unselected* **(2)**
 
           ![](./Images2/3/t3-3c.png)
 
-    These settings will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
+1. The above settings for **Delete Data**  will ensure that any existing .csv files are deleted before copying the **sales.csv** file.
 
 4. In the pipeline designer, navigate to the **Activities (1)** tab and select the **Notebook (2)** to add it to the pipeline.
 

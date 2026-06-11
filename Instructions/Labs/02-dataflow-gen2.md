@@ -87,7 +87,7 @@ In this task, you will add a data destination for the Dataflow to determine wher
 
 1. From the left pane, expand the **fabric-<inject key="DeploymentID" enableCopy="false"/> (1)**, then select the **dbo (2)** under **fabric-lakehouse<inject key="DeploymentID" enableCopy="false"/>** table. The Table name field will automatically populate with **orders (3)**. Click **Next (4)** to continue.
 
-    ![](./Images2/2/e2-t2-des-target.png)
+    ![](./Images2/2/destination-target-orders.png)
 
 1. On the **Choose Destination settings** page, toggle **off** the **use automatic settings (1)** option. Then, for the **MonthNo** column header, set the **Source type** to **Whole number (2)**. Finally, click **Save settings (3)** to apply the changes.
 
@@ -99,7 +99,7 @@ In this task, you will add a data destination for the Dataflow to determine wher
 
 1. Once published, click on the **ellipsis (...) (2)** next to the published **Dataflow (1)** in the workspace, select **Settings (3)**, 
 
-    ![](./Images2/2/e2-t2-6-1.png)
+    ![](./Images2/2/dataflow-settings.png)
 
 1. Rename the dataflow as **Transform Orders Dataflow (1)** and click on **X** to close.
 
