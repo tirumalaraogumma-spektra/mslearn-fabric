@@ -107,8 +107,10 @@ In this task, you will create a pipeline in Microsoft Fabric to ingest data into
 
     ![](./Images2/3/E3T1S15.png)
 
-1. Click on the **Copy job (1)**,go to **Setting (2)** tab located bottom-left and in the **connection** drop down, select **Browse all (3)**
+1. Click on the **Copy job (1)**,go to **Setting (2)** tab located bottom-left  and in the **connection** drop down, select **Browse all (3)**
 
+    > **Note**: Drag the settings line to upwards to see the properties.
+    
     ![](./Images2/3/E3T1S16.png)
 
 1. On the **Choose a data source to get started** page, select **Copy job**
@@ -263,7 +265,9 @@ In this task, you will modify your existing pipeline to include the notebook you
 
     ![](./Images2/3/E3T3S5.png)
 
-6. Select the **Notebook (1)** activity. In the pane below the design canvas, set the following properties:
+6. Select the **Notebook (1)** activity. In the pane below the design canvas and, set the following properties:
+
+    >**Note**: Drag the General tab line to upwards to see the properties.
 
     - Select the **General (2)** tab:
 
